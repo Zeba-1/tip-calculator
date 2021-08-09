@@ -1,0 +1,41 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    margin: 100px;
+}
+
+#calculator {
+    background-color: white;
+    width: 650px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+}
+
+#tipSelector {
+    display: flex;
+
+}
+
+.tipBox {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    display: flex;
+}
+
+#result {
+    background-color: hsl(183, 100%, 15%);
+    height: 100%;
+    width: 50%;
+}
