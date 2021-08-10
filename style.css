@@ -1,9 +1,19 @@
+@font-face {
+    font-family: 'SpaceMono';
+    src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     background-color: hsl(185, 41%, 84%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: "SpaceMono", sans-serif;
+    font-size: 13px;
 }
 
 input {
@@ -34,6 +44,7 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    color: hsl(186, 14%, 43%);
 }
 
 #info p {
@@ -42,7 +53,7 @@ input {
 }
 
 .typingBox {
-    background-color: hsl(183, 60%, 93%);
+    background-color: hsl(189, 41%, 97%);
     margin-right: 25px;
     border-radius: 5px;
     padding: 8px;
@@ -63,25 +74,32 @@ input {
     width: 90px;
     height: 35px;
     border: none;
-    background-color: hsl(183, 60%, 93%);
+    background-color: hsl(189, 41%, 97%);
     border-radius: 5px;
     text-align: center;
 }
 
 .tipBox {
+    transition-property: background-color;
+    transition-duration: 0.2s;
     background-color: hsl(183, 100%, 15%);
     color: white;
-    display: flex;
+    font-size: 15px;
+    font-weight: bold;
     width: 90px;
     height: 35px;
     margin-right: 10px;
     margin-bottom: 10px;
-    text-align: center;
     border-radius: 5px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.tipBox:hover {
+    transition: 0.2s;
+    background-color: hsl(185, 41%, 84%);
 }
 
 #result {
@@ -98,8 +116,47 @@ input {
 }
 
 .recap {
-    color: hsl(185, 41%, 84%);
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: hsl(189, 41%, 97%);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.recap .text p {
+    margin: 2px;
+}
+
+.person {
+    font-size: 10px;
+    color: hsl(184, 14%, 56%);
+}
+
+.bigNumber {
+    margin: 0;
+    color: hsl(172, 67%, 45%);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#reset {
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    margin: 30px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+#reset:hover {
+    transition: 0.2s;
+    background-color: hsl(185, 41%, 84%);
 }
