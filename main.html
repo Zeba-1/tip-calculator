@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Tip Calculator</title>
+        <meta charset="UTF-8" author="Zeba-1">
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="calculator.js"></script>
     </head>
@@ -13,7 +14,7 @@
                 <p>Bill</p>
                 <span class="typingBox">
                     <img src="images/icon-dollar.svg" alt="dolar icon">
-                    <input type="text">
+                    <input type="text" placeholder="0">
                 </span>
                 <p>Select Tip %</p>
                 <span id="tipSelector">
@@ -22,16 +23,32 @@
                     <span class="tipBox">15%</span>
                     <span class="tipBox">25%</span>
                     <span class="tipBox">50%</span>
-                    <span><input type="text" id="customTip"></span>
+                    <span class="tipBox"><input type="text" id="customTip" placeholder="Custom"></span>
                 </span>
                 <p>Number of People</p>
                 <span class="typingBox">
                     <img src="images/icon-person.svg" alt="person icon">
-                    <input type="text">
+                    <input type="text" placeholder="0">
                 </span>
             </span>
             <span id="result">
-
+                <span id="recapBox">
+                    <span class="recap">
+                        <span class="text">
+                            <p>Tip Amount</p>
+                            <p>/ person</p>
+                        </span>
+                        <p class="bigNumber" id="tipAmount">$0.00</p>
+                    </span>
+                    <span class="recap">
+                        <span class="text">
+                            <p>Total</p>
+                            <p>/ person</p>
+                        </span>
+                        <p class="bigNumber" id="total">$0.00</p>
+                    </span>
+                </span>
+                <button id="reset">Reset</button>
             </span>
         </span>
     </body>

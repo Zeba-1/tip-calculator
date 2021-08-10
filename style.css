@@ -6,36 +6,100 @@ body {
     flex-direction: column;
 }
 
+input {
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+}
+
 #logo {
     margin: 100px;
 }
 
 #calculator {
     background-color: white;
-    width: 650px;
-    height: 300px;
+    width: 700px;
+    height: 350px;
+    border-radius: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #info {
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+}
+
+#info p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.typingBox {
+    background-color: hsl(183, 60%, 93%);
+    margin-right: 25px;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    justify-items: center;
+}
+.typingBox input{
+    height: 100%;
+    width: 100%;
 }
 
 #tipSelector {
     display: flex;
+    flex-flow: row wrap;
+}
 
+#tipSelector input {
+    width: 90px;
+    height: 35px;
+    border: none;
+    background-color: hsl(183, 60%, 93%);
+    border-radius: 5px;
+    text-align: center;
 }
 
 .tipBox {
     background-color: hsl(183, 100%, 15%);
     color: white;
     display: flex;
+    width: 90px;
+    height: 35px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 #result {
+    flex-grow: 1;
+    margin: 20px;
+    margin-left: 10px;
     background-color: hsl(183, 100%, 15%);
-    height: 100%;
+    height: auto;
     width: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recap {
+    color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
