@@ -63,6 +63,10 @@ function resetButton() {
 
 
 function check() {
+    let billB = false;
+    let peopleB = false;
+    let tipB = false;
+
     if (bill.value != "") {
         if (isNaN(parseInt(bill.value)))
         {
@@ -71,6 +75,7 @@ function check() {
         }else{
             bill.parentElement.classList.add("activeInput")
             bill.parentElement.classList.remove("badInput")
+            billB = true;
         }
     }else
     {
@@ -86,6 +91,7 @@ function check() {
         }else{
             nPeople.parentElement.classList.add("activeInput")
             nPeople.parentElement.classList.remove("badInput")
+            peopleB = true;
         }
     }else
     {
@@ -107,4 +113,31 @@ function check() {
         customTip.parentElement.classList.remove("activeInput")
         customTip.parentElement.classList.remove("badInput")
     }
+
+    if (typeof(selectTip) == "number"){
+        tipB = true;
+    }
+
+    console.log(billB);
+    console.log(peopleB);
+    console.log(tipB);
+
+    if (billB && peopleB && tipB){
+        console.log("input ok");
+        printRes();
+    }
+}
+
+function printRes() {
+    console.log("work");
+    let totalInt;
+    let totalOfTip;
+    let totalWithBill;
+
+    totalInt = parseInt(bill.value);
+    totalOfTip = totalInt * (selectTip/100);
+    totalWithBill = totalInt + totalOfTip;
+
+    tipAmount.textContent = "$".concat(totalOfTip / parseInt(nPeople.value));
+    total.textContent = "$".concat(totalWithBill / parseInt(nPeople.value));
 }
