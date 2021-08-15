@@ -65,6 +65,13 @@ input {
     width: 100%;
 }
 
+.activeInput {
+    border: hsl(172, 67%, 45%) solid 3px;
+}
+.badInput {
+    border: hsl(0, 67%, 45%) solid 3px;
+}
+
 #tipSelector {
     display: flex;
     flex-flow: row wrap;
@@ -100,6 +107,10 @@ input {
 .tipBox:hover {
     transition: 0.2s;
     background-color: hsl(185, 41%, 84%);
+}
+
+.active {
+    background-color: hsl(172, 67%, 45%);
 }
 
 #result {
